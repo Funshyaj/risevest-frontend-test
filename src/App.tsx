@@ -72,7 +72,7 @@ function App() {
             <div className="basis-2/4 flex flex-col gap-3 text-center md:text-left">
               <h2>{head}</h2>
               <p className="max-w-sm">{body}</p>
-              <div className="pt-5 flex gap-4 items-center hover:gap-6 duration-300 cursor-pointer">
+              <div className="pt-5 flex gap-4 justify-center md:justify-start items-center hover:gap-6 duration-300 cursor-pointer">
                 <p className="text-teal ">Start Investing Now</p>
                 <img src={arrowIcon} alt="arrow icon" className="h-3 w-4" />
               </div>
@@ -96,7 +96,7 @@ function App() {
         </div>
 
         <div className="flex flex-col lg:flex-row gap-10 md:justify-center lg:justify-[unset] md:items-center lg:items-stretch justify-around">
-          {assets.map(({ head, body, icon, color, cta }, index) => (
+          {assets.map(({ head, body, icon, cta }, index) => (
             <div
               key={head}
               className="border-2 border-[#919FB533] rounded-lg flex flex-col justify-between gap-10 text-center duration-300 lg:hover:shadow-md"
@@ -104,10 +104,10 @@ function App() {
               <div
                 className={`h-24 lg:h-32 relative ${
                   index === 0
-                    ? "bg-" + color
+                    ? "bg-fadedOrange"
                     : index === 1
                     ? "bg-fadedPurple"
-                    : "bg-" + color
+                    : "bg-fadedTeal"
                 }`}
               >
                 <img
@@ -117,7 +117,7 @@ function App() {
                 />
               </div>
 
-              <div className="max-w-sm p-5 space-y-4">
+              <div className="max-w-md mx-auto p-5 space-y-4">
                 <h3>{head}</h3>
                 <p>{body}</p>
                 <div className="space-y-1">
@@ -141,8 +141,8 @@ function App() {
       </section>
 
       {/* How we are Regulated */}
-      <section className="relative py-20 my-20 flex items-center justify-center text-center border-y-3 md:-mx-10">
-        <div className="max-w-lg space-y-4">
+      <section className="overflow-hidden relative py-20 my-20 flex items-center justify-center text-center border-y-3 sm:-mx-10">
+        <div className="max-w-lg space-y-4 z-[99]">
           <h2>How we are Regulated</h2>
           <p className="font-semibold">
             Rise is registered and regulated both in the US and in Nigeria. Our
@@ -156,22 +156,22 @@ function App() {
         <img
           src={pat1}
           alt="gardindt pattern"
-          className="absolute left-0 top-0"
+          className="absolute -left-20 sm:-left-10 md:left-0 top-0"
         />
         <img
           src={pat2}
           alt="gardindt pattern"
-          className="absolute left-0 bottom-0"
+          className="absolute -left-20 sm:-left-10  md:left-0 bottom-0"
         />
         <img
           src={pat3}
           alt="gardindt pattern"
-          className="absolute right-0 top-0"
+          className="absolute -right-20 sm:-right-10 top-0"
         />
         <img
           src={pat4}
           alt="gardindt pattern"
-          className="absolute right-0 bottom-0"
+          className="absolute -right-20 sm:-right-10  bottom-0"
         />
       </section>
 

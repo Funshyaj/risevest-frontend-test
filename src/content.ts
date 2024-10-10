@@ -31,21 +31,18 @@ export const why = [
 
 export const assets = [
   {
-    color: 'fadedOrange',
     icon: assets1,
     head: 'Stocks',
     body: 'We help you invest and manage your money by investing in our portfolio of 30 high-growth stocks across the US market with our equity portfolio of power stocks.',
     cta: 'Learn how Stocks work'
   },
   {
-    color: 'fadedPurple',
     icon: assets2,
     head: 'Real Estate',
     body: 'Our Real Estate plan is the sweet middle. Best for those who want a balance of good returns and medium risk. This plan invests in rented buildings in the US.',
     cta: 'Learn how Real Estate work'
   },
   {
-    color: 'fadedTeal',
     icon: assets3,
     head: 'Fixed Income',
     body: 'A low-risk asset perfect for anyone who wants to protect their money in a secure, appreciating currency, i.e. the dollar. For people who want to protect their hard-earned money from inflation while earning steady returns.',
