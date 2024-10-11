@@ -3,7 +3,7 @@ import applestoreIcon from "../assets/applestore.png";
 
 const DownloadCta = () => {
   return (
-    <div className="flex justify-center md:justify-start gap-4">
+    <div className="flex flex-wrap sm:flex-nowrap justify-center md:justify-start gap-4">
       <button
         type="button"
         className="flex items-center gap-5 bg-black rounded-lg py-3 px-4"

@@ -4,6 +4,7 @@ import JoinCommunity from "./assets/joinCoummity.png";
 import ElipseSmall from "./assets/elipse-small.png";
 import ElipseBig from "./assets/ellipse-big.png";
 import arrowIcon from "./assets/arrow.png";
+import saveff from "./assets/saveff.png";
 import pat1 from "./assets/pat-top-left.png";
 import pat2 from "./assets/pat-bottom-left.png";
 import pat3 from "./assets/pat-top-right.png";
@@ -28,7 +29,7 @@ function App() {
     <main className="px-4 sm:px-8">
       <Header />
       {/* hero section */}
-      <section className="flex flex-col md:flex-row items-center min-h-[90vh] md:px-5">
+      <section className="flex flex-col md:flex-row items-center min-h-screen mt-10 md:mt-5 px-5">
         <div className="basis-2/4 flex flex-col gap-3 justify-center text-center md:text-left py-12 md:py-0">
           <h1 className="">Dollar investments that help you grow</h1>
           <p className="hidden md:block font-semibold">
@@ -38,9 +39,11 @@ function App() {
           <p className="md:hidden font-semibold text-lg">
             Your personal wealth manager. Get started with a minimum of $10 and
           </p>
-          <DownloadCta />
+          <div className="-mx-3 md:mx-0">
+            <DownloadCta />
+          </div>
         </div>
-        <div className="basis-2/4 flex justify-end md:pr-24">
+        <div className="basis-2/4 flex justify-end md:pr-10 lg:pr-24">
           <img
             src={pcHeroImg}
             alt="rise vest mobile app mockup"
@@ -55,23 +58,38 @@ function App() {
 
         <img
           src={ElipseBig}
-          alt=""
+          alt="circle icon"
           className="hidden md:block absolute bottom-8 left-40 animate-wiggle"
         />
         <img
           src={ElipseSmall}
-          alt=""
+          alt="circle icon"
           className="hidden md:block absolute top-24 left-14 animate-float"
+        />
+        <img
+          src={ElipseBig}
+          alt="circle icon"
+          className="hidden md:block absolute top-32 right-[40%] animate-float"
+        />
+        <img
+          src={ElipseSmall}
+          alt="circle icon"
+          className="hidden md:block absolute bottom-28 right-1/3 animate-float"
+        />
+        <img
+          src={ElipseBig}
+          alt="circle icon"
+          className="hidden md:block absolute bottom-24 right-10 animate-wiggle"
         />
       </section>
 
       {/* Who supports us section */}
-      <section className="mt-16 mv-8">
+      {/* <section className="mt-16 mv-8">
         <h3 className="text-grayWhite">We are supported by</h3>
-      </section>
+      </section> */}
 
       {/* why section */}
-      <section className="py-16 px-10 lg:px-20 xl:px-32">
+      <section className="py-10 px-10 lg:px-20 xl:px-32">
         {why.map(({ head, body, image }, index) => (
           <div
             key={head}
@@ -148,6 +166,32 @@ function App() {
               </div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Save for future section */}
+      <section className="hidden md:block pt-16 pb-10 px-10 lg:px-20 xl:px-32 mx-auto">
+        <div data-aos="fade-up" className="flex flex-row-reverse  items-center">
+          <div className="basis-2/4 flex flex-col gap-3 items-start">
+            <p className="font-semibold">The Rise App</p>
+            <h2>
+              Save for your <span className="text-[#a89cfe]">future</span>
+            </h2>
+            <p className="max-w-sm">
+              With Rise, you achieve your financial goals faster. Save for
+              school, your home, vacations, your children’s future and more.
+            </p>
+            <button
+              type="button"
+              className="rounded-md bg-teal text-white font-semibold px-5 py-3 md:mt-5 min-w-44"
+            >
+              Start Saving
+            </button>
+          </div>
+          <div className="basis-2/4 relative">
+            <img src={saveff} alt="save for your future" className="" />
+            <div className="bg-[#A0DDE2CC] h-6 absolute bottom-10 w-full md:hidden"></div>
+          </div>
         </div>
       </section>
 
@@ -240,7 +284,7 @@ function App() {
       </section>
 
       {/* Download The Rise App CTA section */}
-      <section className="bg-fadedTeal rounded-3xl my-10 py-10 px-3 md:px-10 md:mx-10 max-h-[32rem] md:max-h-96 overflow-hidden flex flex-col md:flex-row items-center gap-10 text-center md:text-left">
+      <section className="bg-fadedTeal rounded-3xl my-10 py-10 px-3 md:px-10 md:mx-10 max-h-[36rem] xs:max-h-[34rem] md:max-h-96 overflow-hidden flex flex-col md:flex-row items-center gap-10 text-center md:text-left">
         <div className="space-y-4">
           <p className="text-teal md:pl-2">Download The Rise App</p>
           <h2>Join our 100,000 users investing and setting long term goals!</h2>
@@ -257,7 +301,7 @@ function App() {
           className="basis-2/4 flex justify-end md:pr-24 md:mt-40"
           data-aos="fade-up"
         >
-          <img src={pcHeroImg} alt="rise vest mobile app mockup" />
+          <img src={mobileHeroImg} alt="rise vest mobile app mockup" />
         </div>
       </section>
 
