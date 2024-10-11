@@ -1,5 +1,7 @@
 import file1 from './assets/file1.png'
 import file2 from './assets/file2.png'
+import file3 from './assets/file3.png'
+import file4 from './assets/file4.png'
 
 import assets1 from './assets/assets1.png'
 import assets2 from './assets/assets2.png'
@@ -19,12 +21,12 @@ export const why = [
   {
     head: "Set goals and reach them",
     body: "You can invest towards a goal on Rise--retirement, higher education, save for your home or travel budgets. Or create a goal of your own and invest periodically to achieve them. ",
-    image: file1
+    image: file3
   },
   {
     head: "We remember so you dont have to",
     body: "Our Auto-invest feature makes it easy to stay consistent, even when you forget. Set a funding amount, frequency and payment method and Rise will automatically fund your investment, on schedule.",
-    image: file1
+    image: file4
   },
 ];
 

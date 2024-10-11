@@ -12,8 +12,18 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import DownloadCta from "./components/DownloadCta";
 import { why, assets, testimonials } from "./content";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 500, // Animation duration
+      easing: "ease-in-out", // Animation easing
+    });
+  }, []);
+
   return (
     <main className="px-4 sm:px-8">
       <Header />
@@ -65,6 +75,7 @@ function App() {
         {why.map(({ head, body, image }, index) => (
           <div
             key={head}
+            data-aos="fade-up"
             className={`flex flex-col-reverse items-center ${
               (index + 1) % 2 == 0 ? "md:flex-row-reverse" : "md:flex-row"
             }`}
@@ -141,7 +152,7 @@ function App() {
       </section>
 
       {/* How we are Regulated */}
-      <section className="overflow-hidden relative py-20 my-20 flex items-center justify-center text-center border-y-3 sm:-mx-10">
+      <section className="overflow-hidden relative px-5 py-20 my-20 flex items-center justify-center text-center border-y-3 -mx-5 sm:-mx-10">
         <div className="max-w-lg space-y-4 z-[99]">
           <h2>How we are Regulated</h2>
           <p className="font-semibold">
@@ -242,7 +253,10 @@ function App() {
           </div>
         </div>
 
-        <div className="basis-2/4 flex justify-end md:pr-24 md:mt-40">
+        <div
+          className="basis-2/4 flex justify-end md:pr-24 md:mt-40"
+          data-aos="fade-up"
+        >
           <img src={pcHeroImg} alt="rise vest mobile app mockup" />
         </div>
       </section>

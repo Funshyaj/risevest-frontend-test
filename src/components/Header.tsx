@@ -34,9 +34,9 @@ const Header = () => {
       <button>
         <img src={hamburger} alt="hamburger menu" className="md:hidden" />
       </button>
-      <nav className="hidden md:flex md:gap-5 lg:gap-8 xl:gap-10">
+      <nav className="hidden md:flex md:gap-5 lg:gap-8 xl:gap-10 ">
         {navLinks.map(({ label, path }) => (
-          <a key={label} href={path} className="text-teal text-lg">
+          <a key={label} href={path} className="text-teal text-lg nav-link">
             {label}
           </a>
         ))}
