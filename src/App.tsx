@@ -39,7 +39,7 @@ function App() {
           <p className="md:hidden font-semibold text-lg">
             Your personal wealth manager. Get started with a minimum of $10 and
           </p>
-          <div className="-mx-3 md:mx-0">
+          <div className="-mx-5 md:mx-0">
             <DownloadCta />
           </div>
         </div>
@@ -83,7 +83,7 @@ function App() {
         />
       </section>
 
-      {/* Who supports us section */}
+      {/* Who supports us section - couldnt export logos from figma */}
       {/* <section className="mt-16 mv-8">
         <h3 className="text-grayWhite">We are supported by</h3>
       </section> */}
