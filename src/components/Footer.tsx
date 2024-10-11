@@ -31,21 +31,21 @@ const Footer = () => {
     <footer className="mt-20 mb-10 pl-5 lg:px-16 flex flex-wrap gap-10 justify-between">
       <div className="space-y-6 ">
         <h2>rise</h2>
-        {siteMap.map(({ label, path }) => (
-          <nav className="text-sm">
+        <nav className="text-sm flex sp flex-col space-y-6 min-w-24">
+          {siteMap.map(({ label, path }) => (
             <a key={label} className="" href={path}>
               {label}
             </a>
-          </nav>
-        ))}
+          ))}
+        </nav>
       </div>
 
       <div className="space-y-6 min-w-24">
         <h4>Explore</h4>
         <ul className="text-sm space-y-6">
           {explore.map(({ label, path }) => (
-            <li className="flex gap-2 items-center">
-              <a key={label} className="" href={path}>
+            <li key={label} className="flex gap-2 items-center">
+              <a className="" href={path}>
                 {label}
               </a>
               <img src={arrow} alt="" />
@@ -58,8 +58,8 @@ const Footer = () => {
         <h4>Products</h4>
         <ul className="text-sm space-y-6">
           {products.map(({ label, path }) => (
-            <li className="flex gap-2 item-center">
-              <a key={label} className="" href={path}>
+            <li key={label} className="flex gap-2 item-center">
+              <a className="" href={path}>
                 {label}
               </a>
               <img src={arrow} alt="" />
@@ -72,8 +72,8 @@ const Footer = () => {
         <h4>Contact Us</h4>
         <ul className="text-sm space-y-6">
           {contact.map(({ label, path }) => (
-            <li className="flex gap-2 items-center">
-              <a key={label} className="" href={path}>
+            <li key={label} className="flex gap-2 items-center">
+              <a className="" href={path}>
                 {label}
               </a>
               <img src={arrow} alt="" />

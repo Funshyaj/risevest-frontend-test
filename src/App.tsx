@@ -29,7 +29,7 @@ function App() {
     <main className="px-4 sm:px-8">
       <Header />
       {/* hero section */}
-      <section className="flex flex-col md:flex-row items-center min-h-screen mt-10 md:mt-5 px-5">
+      <section className="flex flex-col md:flex-row items-center min-h-screen mt-10 xxs:mt-16 md:mt-12 lg:mt-5 px-5">
         <div className="basis-2/4 flex flex-col gap-3 justify-center text-center md:text-left py-12 md:py-0">
           <h1 className="">Dollar investments that help you grow</h1>
           <p className="hidden md:block font-semibold">
@@ -47,39 +47,39 @@ function App() {
           <img
             src={pcHeroImg}
             alt="rise vest mobile app mockup"
-            className="hidden md:block"
+            className="hidden md:block z-[999]"
           />
           <img
             src={mobileHeroImg}
             alt="rise vest mobile app mockup"
-            className="md:hidden"
+            className="md:hidden z-[999]"
           />
         </div>
 
         <img
           src={ElipseBig}
           alt="circle icon"
-          className="hidden md:block absolute bottom-8 left-40 animate-wiggle"
+          className="absolute bottom-[28%] left-[10%] opacity-50 md:opacity-100 md:bottom-8 md:left-40 animate-wiggle hidden xs:block md:hidden lg:block"
         />
         <img
           src={ElipseSmall}
           alt="circle icon"
-          className="hidden md:block absolute top-24 left-14 animate-float"
+          className="absolute bottom-[28%] right-[10%] opacity-50 md:opacity-100 md:bottom-[unset] md:right-[unset] md:top-24 md:left-14 animate-float  hidden xs:block md:hidden lg:block"
         />
         <img
           src={ElipseBig}
           alt="circle icon"
-          className="hidden md:block absolute top-32 right-[40%] animate-float"
+          className="absolute -bottom-[8%] left-[10%] opacity-50 md:opacity-100 md:bottom-[unset] md:left-[unset] md:top-32 md:right-[40%] animate-float"
         />
         <img
           src={ElipseSmall}
           alt="circle icon"
-          className="hidden md:block absolute bottom-28 right-1/3 animate-float"
+          className="absolute -z-[1] absolute top-[10%] right-[5%] opacity-50 md:top-[unset] md:opacity-100 md:bottom-28 md:right-1/3 animate-float hidden xs:block md:hidden lg:block"
         />
         <img
           src={ElipseBig}
           alt="circle icon"
-          className="hidden md:block absolute bottom-24 right-10 animate-wiggle"
+          className="absolute bottom-24 right-10 opacity-50 md:opacity-100 animate-wiggle md:hidden"
         />
       </section>
 
@@ -241,8 +241,11 @@ function App() {
         </div>
 
         <div className="no-scrollbar snap-x flex justify-around gap-5 overflow-x-scroll py-3 -mx-3 px-2 md:-mx-10 md:px-10 duration-300">
-          {testimonials.map(({ testimony, name, image }) => (
-            <div className="snap-center flex flex-col justify-between p-3 rounded-md shadow-custom hover:shadow-none duration-300 min-h-[200px] w-[300px] xs:w-[340px]">
+          {testimonials.map(({ testimony, name, image }, index) => (
+            <div
+              key={name + index}
+              className="snap-center flex flex-col justify-between p-3 rounded-md shadow-custom hover:shadow-none duration-300 min-h-[200px] w-[300px] xs:w-[340px]"
+            >
               <p className="w-[280px] xs:w-[320px] text-center md:text-left">
                 {testimony}
               </p>
