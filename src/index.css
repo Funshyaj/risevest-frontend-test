@@ -69,6 +69,7 @@ h4 {
 
 @media screen and (min-width:768px) {
   h1 {
+    font-size: 6.5vw;
     letter-spacing: -3px;
     @apply text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-teal font-semibold
   }

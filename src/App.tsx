@@ -36,7 +36,10 @@ function App() {
             We put your money in high quality assets that help you build wealth
             and achieve your financial goals.
           </p>
-          <p className="md:hidden font-semibold text-lg">
+          <p
+            className="md:hidden font-semibold text-lg"
+            style={{ fontSize: "1.5vw" }}
+          >
             Your personal wealth manager. Get started with a minimum of $10 and
           </p>
           <div className="-mx-5 md:mx-0">
@@ -47,7 +50,7 @@ function App() {
           <img
             src={pcHeroImg}
             alt="rise vest mobile app mockup"
-            className="hidden md:block z-[999]"
+            className="hidden md:block z-[999] xxl:w-1/3"
           />
           <img
             src={mobileHeroImg}
@@ -94,11 +97,17 @@ function App() {
           <div
             key={head}
             data-aos="fade-up"
-            className={`flex flex-col-reverse items-center ${
-              (index + 1) % 2 == 0 ? "md:flex-row-reverse" : "md:flex-row"
+            className={`flex flex-col-reverse items-center  ${
+              (index + 1) % 2 == 0
+                ? "md:flex-row-reverse"
+                : "md:flex-row justify-center"
             }`}
           >
-            <div className="basis-2/4 flex flex-col gap-3 text-center md:text-left">
+            <div
+              className={`flex flex-col gap-3 text-center md:text-left ${
+                (index + 1) % 2 == 0 && "basis-2/4"
+              }`}
+            >
               <h2>{head}</h2>
               <p className="max-w-sm">{body}</p>
               <div className="pt-5 flex gap-4 justify-center md:justify-start items-center hover:gap-6 duration-300 cursor-pointer">
@@ -107,8 +116,8 @@ function App() {
               </div>
             </div>
 
-            <div className="basis-2/4 relative">
-              <img src={image} alt={head} className="" />
+            <div className="relative">
+              <img src={image} alt={head} />
               <div className="bg-[#A0DDE2CC] h-6 absolute bottom-10 w-full md:hidden"></div>
             </div>
           </div>
@@ -171,7 +180,10 @@ function App() {
 
       {/* Save for future section */}
       <section className="hidden md:block pt-16 pb-10 px-10 lg:px-20 xl:px-32 mx-auto">
-        <div data-aos="fade-up" className="flex flex-row-reverse  items-center">
+        <div
+          data-aos="fade-up"
+          className="flex flex-row-reverse items-center gap-5"
+        >
           <div className="basis-2/4 flex flex-col gap-3 items-start">
             <p className="font-semibold">The Rise App</p>
             <h2>
@@ -188,7 +200,7 @@ function App() {
               Start Saving
             </button>
           </div>
-          <div className="basis-2/4 relative">
+          <div className="relative">
             <img src={saveff} alt="save for your future" className="" />
             <div className="bg-[#A0DDE2CC] h-6 absolute bottom-10 w-full md:hidden"></div>
           </div>
